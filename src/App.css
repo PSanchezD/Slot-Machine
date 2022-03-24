@@ -1,0 +1,42 @@
+.btn{
+   
+    color: rgb(255, 255, 255);
+    background-color: rgb(29, 145, 253);
+    width: 250px;
+    height: 100px;
+    border-radius: 50%;
+    font-family: 'Lucida Sans';
+    font-size: 30px;
+    
+    
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn1{
+    display: flex;
+    width: 80px;
+    height: 80px;
+    border: none;
+    border-radius: 100%;
+    background-color: rgba(231, 43, 43, 0.842);
+    color: white;
+    font-family: 'Lucida Sans';
+    font-size: 17px;
+    padding-top: 30px;
+    padding-left: 10px;
+}
+.jumbo{
+    height: 200px;
+    background-image: linear-gradient(to right, red,blue );
+    margin-top: 0px;
+    padding-top: 0px;
+    
+}
+.jumboh1{
+    color: yellow;
+    text-align: center;
+}
