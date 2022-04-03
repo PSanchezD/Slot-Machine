@@ -60,7 +60,7 @@ function Main(){
             </div>
         </div>
         <div className='result-c'>
-            <animated.p style={props3} className='money'>You Current have is : ${total}</animated.p>
+            <animated.p style={props3} className='money'>Current balance: ${total}</animated.p>
             <p className='result'>{data}</p>
         </div>
     </>
