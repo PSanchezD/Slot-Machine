@@ -7,23 +7,32 @@ import { useSpring, animated } from 'react-spring'
 function Main(){
 
     const [data,setData]=useState("")
+    let [total,setTotal]=useState(0)
 
     function handleSpin(){
-        const random = Math.floor(Math.random()* 16)
-        let result = ""
-        if(random === 7){
-        result += "JACKPOT!! YOU WON $250,000"
+        const random = Math.floor(Math.random()* 100)
+        let result = "";
+        if(random === 1){
+            result += "JACKPOT!! YOU WON $250,000"
+           setTotal(total + 250000)
         }
-        else if (random === 9){
-        result +="BIG WIN $100"
+        else if (random === 93){
+            result +="BIG WIN $100"
+            setTotal(total + 100)
         }
-        else if (random < 9){
-        result += "NO WIN -$70"
+        else if (random < 50){
+            result += "NO WIN -$70"
+             setTotal(total - 70)
+        }
+        else if (random > 50){
+            result += "NICE! $5"
+             setTotal(total + 5)
         }
         else {
             result +=" You Won $10!"
+            setTotal(total + 10)
         }
-        setData(result)
+        setData(result);
         console.log(random)
 
     }
@@ -31,7 +40,7 @@ function Main(){
     const props = useSpring({from:{ opacity:0}, to:{opacity: 1}, delay:1000})
     const props1 = useSpring({from:{ opacity:0}, to:{opacity: 1}, delay:2000})
     const props2 = useSpring({from:{ opacity:0}, to:{opacity: 1}, delay:3000})
-    const props3 = useSpring({from:{ opacity:0}, to:{opacity: 1}, delay:1000})
+    const props3 = useSpring({from:{opacity:0},to:{opacity:1},delay:4000})
 
 
    return(
@@ -51,7 +60,8 @@ function Main(){
             </div>
         </div>
         <div className='result-c'>
-                    <animated.p style={props3} className='result'>{data}</animated.p>
+            <animated.p style={props3} className='money'>You Current have is : ${total}</animated.p>
+            <p className='result'>{data}</p>
         </div>
     </>
    )

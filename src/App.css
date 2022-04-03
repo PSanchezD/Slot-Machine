@@ -72,6 +72,12 @@
     justify-content: center;
 }
 
+.money{
+    display: grid;
+    justify-content: center;
+    font-size: 40px;
+}
+
 @media all and (max-width: 480px){
     .jumbo{
         width: 100%;
