@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Rubik+Moonrocks&display=swap');
+
+*{
+    font-family: 'Rubik Moonrocks', cursive;
+}
+
 .btn{
    
     color: rgb(255, 255, 255);
@@ -11,37 +17,76 @@
     
 }
 .container{
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
 }
 
-.btn1{
-    display: flex;
-    width: 80px;
-    height: 80px;
+.btn-c{
+    display: grid;
+    justify-content: center;
+}
+
+.btn{
+    display: grid;
+    justify-self: center;
     border: none;
     border-radius: 100%;
-    background-color: rgba(231, 43, 43, 0.842);
+    background-image: linear-gradient(45deg, rgb(87, 207, 255),rgb(255, 100, 177) );
     color: white;
     font-family: 'Lucida Sans';
-    font-size: 17px;
+    font-size: 37px;
     padding-top: 30px;
     padding-left: 10px;
 }
 .jumbo{
     height: 200px;
-    background-image: linear-gradient(to right, red,blue );
+    background-image: linear-gradient(45deg, rgb(87, 207, 255),rgb(255, 100, 177) );
     margin-top: 0px;
     padding-top: 0px;
     
 }
 .jumboh1{
-    color: yellow;
+    color: rgb(255, 233, 107);
+    font-size: 70px;
     text-align: center;
     margin-top: 0px;
     padding-top: 0px;
 }
 .slots{
     display: flex;
+}
+
+.result{
+    color:orange;
+    font-size: 200px;
+    font-family: 'Franklin Gothic Medium'; 
+}
+
+.intro {
+    font-size: 50px;
+}
+
+.result-c{
+    display: grid;
+    justify-content: center;
+}
+
+@media all and (max-width: 480px){
+    .jumbo{
+        width: 100%;
+    }
+    .jumboh1{
+        font-size: 28px;
+    }
+    .intro{
+        font-size: 22px;
+    }
+    .result-c{
+        display: grid;
+        justify-content: center;
+    }
+    .result{
+        font-size: 30px ;
+    }
 }
